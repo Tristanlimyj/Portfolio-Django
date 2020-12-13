@@ -1,0 +1,44 @@
+ {% extends "base.html" %}
+ {% load static %}
+ {% block styles %}
+     <link rel="stylesheet" href="{% static 'shared/css/showcase.css' %}">
+ {% endblock %}
+ {% block title %}
+     Projects
+ {% endblock %}
+ 
+ {% block content %}
+     <div class="container">
+         <div class="row">
+            {% for post in object_list %}
+            <a
+                href="{% url 'indv_project' post.pk %}"
+                class="
+                    card
+                    col-sm-6 
+                    col-md-6
+                    col-lg-4
+                    col-xl-4
+                "
+            >
+                {% load static %}
+                <img src="{% get_media_prefix %}/{{ post.cover_img  }}">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        {{ post.title|capfirst }}
+                    </h2>
+                    <p class="card-text">
+                        {{ post.preview_text|capfirst }}
+                    </p>
+                    <button
+                        class="btn btn-dark"
+                    >
+                        View Post
+
+                    </button>
+                </div>
+            </a>
+            {% endfor %}
+         </div>
+     </div>
+ {% endblock %}

@@ -1,0 +1,19 @@
+.btn a {
+    color: white!important;
+    text-decoration: none;
+}
+a.card {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    margin-right: 1rem!important;
+    margin-bottom: 1rem;
+    color: black;
+    text-decoration: none;
+}
+a.card:hover {
+    text-decoration: underline;
+}
+.card-title {
+    font-weight: bold;
+}

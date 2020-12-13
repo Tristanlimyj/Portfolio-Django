@@ -1,0 +1,56 @@
+/* CSS for all View Ports */
+/* Self Intro Section */
+#self-intro {
+    padding-top: 1rem!important;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    margin-bottom: 2rem;
+}
+#self-intro-picture {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#profile-pic {
+    max-width: 50%;
+    border-radius: 50%;
+}
+#self-intro-write-up {
+    text-align: left;
+}
+/* 
+    Recent Section 
+    Trying to use share the css so that I DRY
+                                                */
+
+.recent-container {
+    padding: 0px;
+    margin-bottom: 2rem;
+}
+.recent-header {
+    font-weight: bold;
+}
+.indv-item {
+    margin-bottom: 1.25rem;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+.indv-item:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.cover-img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.item-title {
+    font-weight: bold;
+}
+
+/* CSS for all Views Smaller tehn 992 px */
+@media only screen and (max-width: 992px) {
+    .recent-header {
+        text-align: center;
+    }
+}

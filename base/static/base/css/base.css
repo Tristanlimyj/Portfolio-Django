@@ -1,0 +1,18 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.nav {
+    margin-top: 4px;
+    margin-bottom: 1rem;
+    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+    background-color: white;
+}
+.nav-link {
+    font-size: 1.1rem;
+    color: black!important;
+}
+.nav-link:hover {
+    font-size: 1.2rem;
+    font-weight: bold;
+}

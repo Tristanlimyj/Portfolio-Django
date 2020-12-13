@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'project/css/indv_proj.css' %}">
+{% endblock %}
+{% block title %}
+    {{ post.title_tag }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div
+                class="
+                    project
+                    col-sm-12
+                    col-md-12
+                    offset-lg-1
+                    col-lg-5
+                    offset-xl-1
+                    col-xl-5
+                "
+            >
+                {% load static %}
+                <img src="{% get_media_prefix %}/{{ project.cover_img  }}">
+            </div>
+            <div
+                class="
+                    project
+                    col-sm-12
+                    col-md-12
+                    offset-lg-1
+                    col-lg-5
+                    offset-xl-1
+                    col-xl-5
+                "
+            >
+                <h2>
+                    {{ project.title|capfirst }}
+                </h2>
+                <p>
+                    Author: <small> {{ project.author|capfirst }} </small>
+                    |
+                    Date Posted: <small>{{ project.time_stamp }}</small>
+                    <br>
+                    <a href="{{ project.project_url }}">
+                        Link to Project
+                    </a>
+                    {% if project.git_repo %}
+                        {{ project.git_repo }}
+                    {% else %}
+                        &ensp;|&ensp;The Git Repo for this project is not public.
+                    {% endif %}
+                </p>
+                <hr>
+                {{ project.body|safe }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
