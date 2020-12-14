@@ -1,21 +1,24 @@
 from dotenv import load_dotenv
 from pathlib import Path
-import os
+import os, json
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initializing Dot Env
 load_dotenv(dotenv_path=BASE_DIR / '.env')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+if os.getenv('SETTING_TYPE') == 'Development':
+    ALLOWED_HOST = [".localhost", "127.0.0.1"]
+    DEBUG = True
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+else:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
