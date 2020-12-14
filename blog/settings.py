@@ -1,11 +1,11 @@
 from dotenv import load_dotenv
 from pathlib import Path
-import os, json
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initializing Dot Env
-load_dotenv(dotenv_path=BASE_DIR / '.env')
+load_dotenv()
 
 if os.getenv('SETTING_TYPE') == 'Development':
     ALLOWED_HOST = [".localhost", "127.0.0.1"]
@@ -14,9 +14,11 @@ if os.getenv('SETTING_TYPE') == 'Development':
     SESSION_COOKIE_SECURE = False
     CSRF_COOKIE_SECURE = False
 else:
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+    ALLOWED_HOST = [".goodfunfriday", "139.59.112.156"]
+    DEBUG = False
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
@@ -99,23 +101,15 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'Asia/Singapore'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+# Static & Media
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
