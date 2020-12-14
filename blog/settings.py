@@ -7,18 +7,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Initializing Dot Env
 load_dotenv()
 
-if os.getenv('SETTING_TYPE') == 'Development':
-    ALLOWED_HOSTS = [".localhost", "127.0.0.1"]
-    DEBUG = True
-    SECURE_SSL_REDIRECT = False
-    SESSION_COOKIE_SECURE = False
-    CSRF_COOKIE_SECURE = False
-else:
-    ALLOWED_HOSTS = [".goodfunfriday", "139.59.112.156"]
-    DEBUG = False
-    SECURE_SSL_REDIRECT = False
-    SESSION_COOKIE_SECURE = False
-    CSRF_COOKIE_SECURE = False
+ALLOWED_HOSTS = [".localhost", "127.0.0.1"]
+DEBUG = True
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
