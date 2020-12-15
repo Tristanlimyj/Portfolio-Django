@@ -22,7 +22,7 @@
                 "
             >
                 {% load static %}
-                <img src="{% get_media_prefix %}/{{ project.cover_img  }}">
+                <img class="proj-image" src="{% get_media_prefix %}/{{ project.cover_img  }}">
             </div>
             <div
                 class="
@@ -46,7 +46,7 @@
                     <a href="{{ project.project_url }}">
                         Link to Project
                     </a>
-                    {% if project.git_repo %}
+                    {% if project.git_repo != "false" %}
                         {{ project.git_repo }}
                     {% else %}
                         &ensp;|&ensp;The Git Repo for this project is not public.

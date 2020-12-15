@@ -11,7 +11,7 @@ class Project(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     preview_text = models.CharField(max_length=200)
     project_url = models.CharField(max_length=200)
-    git_repo = models.CharField(max_length=200, default=False)
+    git_repo = models.CharField(max_length=200, default="false")
     body = RichTextField(blank=True, null=True)
 
     def __str__(self):
