@@ -12,7 +12,7 @@
         <div class="row">
             {% for post in object_list %}
                     <a
-                        href="{% url 'indv_post' post.pk %}"
+                        href="{% url 'indv_post' post.title|slugify %}"
                         class="
                             card
                             col-sm-6 

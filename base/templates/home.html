@@ -66,7 +66,7 @@
                     <div class="row">
                         {% for post in posts %}
                             <a
-                                href="{% url 'indv_post' post.pk %}"
+                                href="{% url 'indv_post' post.title|slugify %}"
                                 class="
                                     indv-item
                                     col-sm-12
@@ -111,7 +111,7 @@
                     <div class="row">
                         {% for proj in projects %}
                             <a
-                                href="{% url 'indv_project' proj.pk %}"
+                                href="{% url 'indv_project' proj.title|slugify %}"
                                 class="
                                     indv-item
                                     col-sm-12
