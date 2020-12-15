@@ -19,7 +19,7 @@ a.card:hover {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .proj-cover-img {
       height: 50vh;
     }
