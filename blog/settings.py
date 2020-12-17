@@ -15,7 +15,7 @@ if os.getenv('SETTING_TYPE') == 'Development':
     CSRF_COOKIE_SECURE = False
 else:
     ALLOWED_HOSTS = [".goodfunfriday.com", "139.59.112.156"]
-    DEBUG = False
+    DEBUG = True
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
