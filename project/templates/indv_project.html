@@ -39,7 +39,8 @@
                     {{ project.title|capfirst }}
                 </h2>
                 <p>
-                    Author: <small> {{ project.author|capfirst }} </small>
+                    
+                    Author: <small> {{ project.author.first_name | capfirst }} </small>
                     |
                     Date Posted: <small>{{ project.time_stamp }}</small>
                     <br>
@@ -49,11 +50,13 @@
                     {% if project.git_repo != "false" %}
                         {{ project.git_repo }}
                     {% else %}
-                        &ensp;|&ensp;The Git Repo for this project is not public.
+                        &ensp;|&ensp;Git Repo is not public 
                     {% endif %}
                 </p>
                 <hr>
-                {{ project.body|safe }}
+                <div class="project-body">
+                    {{ project.body|safe }}
+                </div>
             </div>
         </div>
     </div>

@@ -32,7 +32,9 @@
                     Date Posted: <small>{{ post.time_stamp }}</small>
                 </p>
                 <hr>
-                {{ post.body|safe }}
+                <div class="post-body">
+                    {{ post.body|safe }}
+                </div>
             </div>
         </div>
     </div>
