@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django_otp.admin import OTPAdminSite
 from post.models import Post
 from project.models import Project
 
@@ -12,6 +11,3 @@ def HomeView(request):
         'projects': projects,
     }
     return render(request, 'home.html', context=values)
-
-class TwoFAAdmin(OTPAdminSite):
-    pass
