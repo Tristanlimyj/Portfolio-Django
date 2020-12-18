@@ -14,4 +14,4 @@ urlpatterns = [
 if os.getenv('SETTING_TYPE') == "Development":
     urlpatterns.append(path('admin/', admin.site.urls))
 else:
-    path('admin/', two_FA_admin.urls),
+     urlpatterns.append(path('admin/', two_FA_admin.urls)),
