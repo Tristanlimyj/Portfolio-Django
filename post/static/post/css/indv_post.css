@@ -1,3 +1,4 @@
+/* For All Viewp Ports */
 .post {
     text-align: center;
 }
@@ -6,4 +7,11 @@
 }
 .post-body {
     margin-bottom: 4rem!important;
+}
+
+/* CSS for all Views Larger than 992 px */
+@media only screen and (min-width: 992px) {
+    .post-img {
+        height: 55vh !important;
+    }
 }

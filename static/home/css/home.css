@@ -48,7 +48,7 @@
     font-weight: bold;
 }
 
-/* CSS for all Views Smaller tehn 992 px */
+/* CSS for all Views Smaller than 992 px */
 @media only screen and (max-width: 992px) {
     .recent-header {
         text-align: center;
