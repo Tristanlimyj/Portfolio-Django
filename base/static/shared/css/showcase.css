@@ -3,7 +3,7 @@
     color: white!important;
     text-decoration: none;
 }
-
+ 
 a.card {
     padding-left: 0px;
     padding-right: 0px;
@@ -19,6 +19,6 @@ a.card:hover {
 .card-title {
     font-weight: bold;
 }
-.proj-cover-img {
+.item-cover-img {
     width: 100%;
 }
