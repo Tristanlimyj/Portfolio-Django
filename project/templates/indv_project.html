@@ -1,7 +1,13 @@
-{% extends "base.html" %} {% load static %} {% block styles %}
-<link rel="stylesheet" href="{% static 'project/css/indv_proj.css' %}" />
-{% endblock %} {% block title %} {{ post.title_tag }} {% endblock %} {% block
-content %}
+{% extends "base.html" %} 
+{% load static %} 
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'project/css/indv_proj.css' %}" />
+{% endblock %} 
+{% block title %}
+  {{ post.title_tag }} 
+{% endblock %} 
+
+{% block content %}
 <div class="container">
   <div class="row">
     <div
@@ -23,7 +29,7 @@ content %}
         <br />
         <a href="{{ project.project_url }}"> Link to Project </a>
         {% if project.git_repo != "false" %}
-        <a href="{{ project.git_repo }}"> &ensp;|&ensp; Link to Git Repo </a>
+        <a href="{{ project.git_repo }}"> Link to Git Repo </a>
         {% else %} &ensp;|&ensp;Git Repo is not public {% endif %}
       </p>
       <hr />
