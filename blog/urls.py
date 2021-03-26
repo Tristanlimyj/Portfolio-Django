@@ -7,5 +7,4 @@ urlpatterns = [
     path('', include('base.urls')),
     path('posts/', include('post.urls')),
     path('projects/', include('project.urls')),
-    re_path('djga/', include('google_analytics.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

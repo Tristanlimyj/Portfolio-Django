@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'project.apps.ProjectConfig',
     'ckeditor',
     'django_otp',
-    'django_otp.plugins.otp_totp',
-    'google_analytics',
+    'django_otp.plugins.otp_totp'
 ]
 
 MIDDLEWARE = [
@@ -86,9 +85,7 @@ DATABASES = {
         'HOST': os.getenv("HOST"),
     }
 }
-GOOGLE_ANALYTICS = {
-    'google_analytics_id': 'G-6Y1CW1FDPZ',
-}
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 

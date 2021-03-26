@@ -4,6 +4,7 @@ from .models import Post
 
 class HomeView(ListView):
     model = Post
+    ordering = ['-time_stamp']
     template_name = 'posts.html'
 
 class PostDetailView(DetailView):
