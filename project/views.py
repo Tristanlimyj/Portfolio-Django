@@ -5,6 +5,7 @@ from .models import Project
 class AllProjectsView(ListView):
     model = Project
     template_name = 'projects.html'
+    ordering = ['-time_stamp']
 
 class ProjectDetailView(DetailView):
     model = Project
